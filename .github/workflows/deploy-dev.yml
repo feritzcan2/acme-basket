@@ -1,0 +1,13 @@
+name: Deploy dev
+on:
+  push:
+    branches: [development]
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: dev
+      url: https://dev.acme-shop.example
+    steps:
+      - uses: actions/checkout@v4
+      - run: echo "Deploying $GITHUB_SHA to dev"; sleep 5; echo "dev is healthy"

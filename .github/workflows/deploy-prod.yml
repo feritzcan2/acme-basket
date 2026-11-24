@@ -1,0 +1,13 @@
+name: Deploy production
+on:
+  push:
+    branches: [master]
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: production
+      url: https://acme-shop.example
+    steps:
+      - uses: actions/checkout@v4
+      - run: echo "Deploying $GITHUB_SHA to production"; sleep 5; echo "production is healthy"

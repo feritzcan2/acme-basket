@@ -1,0 +1,11 @@
+{
+  "name": "acme-shop",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Acme Shop checkout API (fictional demo project)",
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "node --test"
+  }
+}
